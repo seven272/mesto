@@ -4,4 +4,9 @@
     height: auto;
     align-self: center;
     margin-left: 35px;
+    cursor: pointer;
+}
+
+.element__like:hover {
+    opacity: 0.5;
 }
