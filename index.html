@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="pages/index.css">
+  <title>Четвертый спринт</title>
+</head>
+
+<body class="page">
+
+  <header class="header">
+    <img class="header__logo" src="images/header/logo_header.png" alt="логотип в шапке">
+  </header>
+  <main class="content">
+   <section class="profile">
+      <img class="profile__avatar" src="images/profile/avatar.jpg" alt="фотография пользователя">
+      <div class="profile__info">
+      <h1 class="profile__title">Жав-Ив Кусто</h1>
+      <p class="profile__subtitle">Исследователь океана</p>
+      <button class="profile__edit-button"><img class="vector-profile" src="images/profile/vector-profile.png" alt="иконка редактора профиля"></button>
+     
+      <!-- верстка блока попар -->
+      <!-- <nav class="nav">
+        <ul class="nav__list">
+          <li class="">Редактировать профиль</li>
+          <li class="">Жав-ив Кусто</li>
+          <li class=""> Исследователь океана</li>
+          <li class="">Сохранить</li>
+        </ul>
+      </nav> -->
+      
+
+    
+      </div>
+      <button class="profile__add-button">+</button>
+   </section>
+   <section class="elements">
+     <div class="element">
+       <img class="element__photo" src="images/elements/gora.jpg" alt="Горы">
+       <h2 class="element__title">Домбай</h2>
+       <img class="element__like" src="images/elements/vector.png" alt="поставить лайк">
+     </div>
+
+     <div class="element">
+      <img class="element__photo" src="images/elements/hram.jpg" alt="Храм , Карачаевск">
+      <h2 class="element__title">Карачаевск</h2>
+      <img class="element__like" src="images/elements/vector.png" alt="поставить лайк">
+    </div>
+
+    <div class="element">
+      <img class="element__photo" src="images/elements/pole.jpg" alt="Гора Эльбрус">
+      <h2 class="element__title">Гора Эльбрус</h2>
+      <img class="element__like" src="images/elements/vector.png" alt="поставить лайк">
+    </div>
+
+    <div class="element">
+      <img class="element__photo" src="images/elements/gora.jpg" alt="Горы">
+      <h2 class="element__title">Домбай</h2>
+      <img class="element__like" src="images/elements/vector.png" alt="поставить лайк">
+    </div>
+
+    <div class="element">
+     <img class="element__photo" src="images/elements/hram.jpg" alt="Храм , Карачаевск">
+     <h2 class="element__title">Карачаево-Черкессия</h2>
+     <img class="element__like" src="images/elements/vector.png" alt="поставить лайк">
+   </div>
+
+   <div class="element">
+     <img class="element__photo" src="images/elements/pole.jpg" alt="Гора Эльбрус">
+     <h2 class="element__title">Гора Эльбрус</h2>
+     <img class="element__like" src="images/elements/vector.png" alt="поставить лайк">
+   </div>
+   </section>
+  </main>
+  <footer class="footer">
+    <p class="footer__copyright">&copy;2020. Mesto Russia</p>
+  </footer>
+
+   <section class="popup ">
+    <form  class="popup__container">
+      
+        <h2 class="popup__title">Редактировать профиль</h2>
+        <p><input type="text" class="popup__name" value="Жав-Ив Кусто"></p>
+        <p><input type="text" class="popup__work" value="Исследователь океана"></p>
+        <input type="submit" class="popup__button" value="Сохранить">
+        <img class="popup__close" src="../mesto/images/popup/popup_close.png" alt="закрыть окно">
+      
+    </form>
+  </section>
+  <script src="scripts/index.js"></script>
+</body>
+</html>
