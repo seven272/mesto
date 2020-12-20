@@ -10,7 +10,7 @@
   @font-face {
     font-family: 'Inter';
     font-style: normal;
-    font-weight: 500; 
+    font-weight: 500;
     src: local('Inter'),
         url(../fonts/Inter-Regular.woff2),
         url(../fonts/Inter-Regular.woff);
