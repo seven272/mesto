@@ -17,12 +17,3 @@
         padding-bottom: 36px;
    } 
 }
-
-@media screen and (max-width: 320px) {
-    .profile {
-        max-width: 88.13%;
-        min-height: 286px;
-        flex-direction: column;
-        padding-bottom: 36px;
-   } 
-}

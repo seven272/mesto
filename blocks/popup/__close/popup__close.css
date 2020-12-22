@@ -2,9 +2,9 @@
     position: absolute;
     left: 100%;
     right: 0;
-    top: -40px;
-    width: 40px;
-    height: 40px;
+    top: -55px;
+    width: 58px;
+    height: 58px;
     transform: rotate(90deg);
     cursor: pointer;
 }
@@ -16,7 +16,10 @@
 @media screen and (max-width: 768px) {
 
     .popup__close {
-        left: 87%;
+        left: 90%;
+        top: -35px;
+        width: 26px;
+        height: 26px;
     }
 
   }
