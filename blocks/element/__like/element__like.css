@@ -15,6 +15,6 @@
 }
 
 .element__like:active {
-    opacity: 1; 
+    opacity: 1;
     background-image: url(../../../images/elements/like-dark.svg);
 }
