@@ -9,76 +9,31 @@ let jobProfile = document.querySelector('.profile__subtitle');//создали �
 let formElement = document.querySelector('.popup__container');
 
 
+function activePopup() {
+    popup.classList.add('popup_active'); //при клике по кнопке "редактировать" активируем попап
+    nameInput.value = nameProfile.textContent //подставляем  данные из профиля в форму
+    jobInput.value =  jobProfile.textContent //подставляем  данные из профиля в форму
+}
 
-openButton.addEventListener('click', () => { //при клике по кнопке "редактировать" активируем попап
-    popup.classList.add('popup_active');
-});
+function closePopup() {
+    popup.classList.remove('popup_active');//при клике по кнопке "закрыть" убираем попап
+}
 
-closeButton.addEventListener('click', () => { //при клике по кнопке "закрыть" убираем попап
-    popup.classList.remove('popup_active');
-});
-
-popup.addEventListener('click', (event) => {  //проверяет по какому элементу был клик и если за областью белого фона, то закрывает попап
+function verifyPopup(event) { //проверяет по какому элементу был клик и если за областью белого фона, то закрывает попап
     if (event.target === event.currentTarget) {
-        popup.classList.remove('popup_active');
+        closePopup();
     }
-});
-
+}
 
 function handleFormSubmit(event) {
     event.preventDefault(); // Эта строчка отменяет стандартную отправку формы. Так мы можем определить свою логику отправки.           
     nameProfile.textContent = nameInput.value; // Вставили новые значение из value в форму с помощью textContent 
     jobProfile.textContent = jobInput.value;  // Вставили новые значение из value в форму с помощью textContent
+    closePopup(); //вызвали функцию закрытия попапа. Теперь попап закрывается после нажатия на кнопку сохранить
 }
-saveButton.addEventListener('click', () => {
-    popup.classList.remove('popup_active');
-}); //закрываем попап при нажатии на кнопку "сохранить"
 
+
+openButton.addEventListener('click', activePopup); //слушатель события открытия попапа
+closeButton.addEventListener('click',closePopup);//слушатель события открытия попапа
+popup.addEventListener('click', verifyPopup); //слушатель проверки области попапа при клике
 formElement.addEventListener('submit', handleFormSubmit); // метод addEventListener это способ повесить событие (event) на элемент. 
-
-
-
-
-
-
-// Код до исправлений
-// let openButton = document.querySelector('.profile__edit-button');
-// let popup = document.querySelector('.popup');
-// let closeButton = document.querySelector('.popup__close');
-
-// let togglePopup = function() {
-//     popup.classList.toggle('popup_active');
-// }
-
-// openButton.addEventListener('click', togglePopup);
-
-// closeButton.addEventListener('click', togglePopup);
-
-// popup.addEventListener('click', (event) => {
-//     if(event.target === event.currentTarget) {
-//         togglePopup()
-//     }
-// });
-
-
-
-// let formElement = document.querySelector('.popup__container');
-
-// function handleFormSubmit (event) {
-//     event.preventDefault(); // Эта строчка отменяет стандартную отправку формы.
-//                         // Так мы можем определить свою логику отправки.
-
-//     let nameInput = popup.querySelector('.popup__input_type_name'); // Выбор форм инструментом .querySelector()
-//     let jobInput = popup.querySelector('.popup__input_type_job');// Выбор форм инструментом .querySelector()
-
-//     nameInput.getAttribute('value'); //получили значение полей
-//     jobInput.getAttribute('value'); //получили значение полей
-
-//     nameInput.textContent = nameInput.value; // Вставили новые значения в value с помощью textContent
-//     jobInput.textContent = jobInput.value; // Вставили новые значения в value с помощью textContent
-
-//     console.log(nameInput.value); //вывод в консоль нового значения value для проверки
-//     console.log(jobInput.value); //вывод в консоль нового значения value для проверки
-// }
-// formElement.addEventListener('submit', handleFormSubmit); // метод addEventListener это способ повесить событие (event) на элемент. 
-
