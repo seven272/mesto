@@ -4,10 +4,10 @@
     align-self: center;
     margin-left: 35px;
     cursor: pointer;
-    background: transparent;
-    background-repeat: no-repeat;
-    border: 0;
-    background-image: url(../../../images/elements/like.svg);
+    border: none;
+    outline: none;
+    background: url(../../../images/elements/like.svg) no-repeat transparent;
+    background-size: contain;
 }
 
 .element__like:hover {
@@ -15,6 +15,9 @@
 }
 
 .element__like:active {
-    opacity: 1;
-    background-image: url(../../../images/elements/like-dark.svg);
+    background: url(../../../images/elements/like-dark.svg) no-repeat transparent;
+    opacity: 1; 
+    border: none;
+    outline: none;
+    background-size: contain;
 }
