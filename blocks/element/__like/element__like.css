@@ -16,7 +16,7 @@
 
 .element__like:active {
     background: url(../../../images/elements/like-dark.svg) no-repeat transparent;
-    opacity: 1; 
+    opacity: 1;
     border: none;
     outline: none;
     background-size: contain;
